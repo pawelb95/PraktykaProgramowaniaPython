@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="myPersonalDatabase" uuid="ae2a090c-92d5-4a6b-adb5-f284364ec405">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:C:\Users\Paweł\PycharmProjects\pythonProject\Flask exercise\myPersonalDatabase.db</jdbc-url>
+    </data-source>
+  </component>
+</project>
