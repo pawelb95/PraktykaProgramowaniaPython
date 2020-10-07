@@ -15,7 +15,7 @@ if fileName:
     label = QLabel(widget)
     pixmap = QPixmap(fileName)
     label.setPixmap(pixmap)
-    widget.resize(pixmap.width(),pixmap.height())    
+    widget.resize(pixmap.width(), pixmap.height())
 
 widget.show()
 app.exec_()
