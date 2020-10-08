@@ -1,7 +1,7 @@
 from PyQt5.QtGui import QPixmap
 from PyQt5.QtWidgets import QMainWindow, QApplication, QTabWidget, QWidget, QPushButton
 from PyQt5.QtWidgets import QFileDialog, QLabel, QGridLayout, QLineEdit, QSpinBox, QPlainTextEdit
-from PyQt5.QtCore import Qt, QFile
+from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QKeySequence
 
 
@@ -30,7 +30,6 @@ class Window(QMainWindow):
         self.task2_menu.addAction('Save  (Ctrl+S)', self.task2_save)
         self.task2_menu.addAction('SaveAs  (Ctrl+K)', self.task2_saveas)
 
-
     def create_tabs(self):
         self.tabs = QTabWidget()
 
@@ -40,15 +39,14 @@ class Window(QMainWindow):
 
         self.textbox = QPlainTextEdit(self.tab_2)
         self.textbox.setGeometry(10, 10, 770, 450)
-        SaveButton = QPushButton(self.tab_2)
-        SaveButton.setGeometry(10, 470, 375, 50)
-        SaveButton.setText("Zapisz")
-        SaveButton.clicked.connect(self.task2_save)
-        ClearButton = QPushButton(self.tab_2)
-        ClearButton.setGeometry(395,470,375,50)
-        ClearButton.setText("Wyczyść")
-        ClearButton.clicked.connect(self.task2_clear)
-
+        save_button = QPushButton(self.tab_2)
+        save_button.setGeometry(10, 470, 375, 50)
+        save_button.setText("Zapisz")
+        save_button.clicked.connect(self.task2_save)
+        clear_button = QPushButton(self.tab_2)
+        clear_button.setGeometry(395, 470, 375, 50)
+        clear_button.setText("Wyczyść")
+        clear_button.clicked.connect(self.task2_clear)
 
         layout = QGridLayout()
 
@@ -81,37 +79,36 @@ class Window(QMainWindow):
 
         self.setCentralWidget(self.tabs)
 
-
     def keyPressEvent(self, event):
         k = event.key()
         m = int(event.modifiers())
         if k == Qt.Key_Escape:
             self.close()
-        elif QKeySequence(m+k) == QKeySequence('Ctrl+G'):
+        elif QKeySequence(m + k) == QKeySequence('Ctrl+G'):
             self.task1_open()
-        elif QKeySequence(m+k) == QKeySequence('Ctrl+Q'):
+        elif QKeySequence(m + k) == QKeySequence('Ctrl+Q'):
             self.task3_clear()
-        elif QKeySequence(m+k) == QKeySequence('Ctrl+W'):
+        elif QKeySequence(m + k) == QKeySequence('Ctrl+W'):
             self.task2_clear()
-        elif QKeySequence(m+k) == QKeySequence('Ctrl+O'):
+        elif QKeySequence(m + k) == QKeySequence('Ctrl+O'):
             self.task2_open()
-        elif QKeySequence(m+k) == QKeySequence('Ctrl+S'):
+        elif QKeySequence(m + k) == QKeySequence('Ctrl+S'):
             self.task2_save()
-        elif QKeySequence(m+k) == QKeySequence('Ctrl+K'):
+        elif QKeySequence(m + k) == QKeySequence('Ctrl+K'):
             self.task2_saveas()
 
     def task1_open(self):
-        fileName, selectedFilter = QFileDialog.getOpenFileName(self.tab_1,
-                                                               "Wybierz plik obrazu",
-                                                               "Początkowa nazwa pliku",
-                                                               "PNG (*.png)")
-        if fileName:
-            print(fileName)
+        file_name, selected_filter = QFileDialog.getOpenFileName(self.tab_1,
+                                                                 "Wybierz plik obrazu",
+                                                                 "Początkowa nazwa pliku",
+                                                                 "PNG (*.png)")
+        if file_name:
+            print(file_name)
             self.tabs.setCurrentWidget(self.tab_1)
             self.tab_1.hide()
             self.label.clear()
             self.label = QLabel(self.tab_1)
-            self.pixmap = QPixmap(fileName)
+            self.pixmap = QPixmap(file_name)
             self.label.setPixmap(self.pixmap)
             self.tab_1.show()
 
@@ -121,9 +118,9 @@ class Window(QMainWindow):
 
     def task2_open(self):
         self.task2_filename, selectedfilter = QFileDialog.getOpenFileName(self.tab_2,
-                                                                         "Wybierz plik tekstowy",
-                                                                         "",
-                                                                         "TXT (*.txt)")
+                                                                          "Wybierz plik tekstowy",
+                                                                          "",
+                                                                          "TXT (*.txt)")
         if self.task2_filename:
             file_text = open(self.task2_filename).read()
             self.textbox.clear()
@@ -150,7 +147,6 @@ class Window(QMainWindow):
         self.line_edit1.clear()
         self.line_edit2.clear()
         self.spin_box3.setValue(0)
-
 
     def task3_field_changed(self):
         self.line_edit4.clear()
