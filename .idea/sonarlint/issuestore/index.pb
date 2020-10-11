@@ -38,8 +38,6 @@ j
 ^
 ..idea/inspectionProfiles/profiles_settings.xml,1\e\1e9075f5bf079c01ef2c910709e91a497d262080
 S
-#.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
-S
 #PyQt exercise/PyQt - Przyklad 1c.py,e\b\ebdbedb8484ad32944e5c30fb28e8162816a76c5
 S
 #PyQt exercise/PyQt - Przyklad 1d.py,8\a\8ab759d4cb4ac3810b75c3b13ce63e94c4809bbc
@@ -65,7 +63,17 @@ Z
 *Turtle exercise/turtle - prosty fraktal.py,c\3\c3e437fc730c481107cd156e2cbf89f1843efa09
 S
 #PyQt exercise/PyQt - Przyklad 1a.py,a\4\a4c7c98bc2be94ced507db5e7bae9de3bace8b99
-J
-PyQt exercise/PyQt5Test.py,2\9\29fbdee675b854f1a72eed8144a5752b0192e594
 S
 #PyQt exercise/PyQt - Przyklad 1b.py,9\1\91549b582ff34c5234f66e037b40718d8ebe50b5
+R
+"Keras exercise/Keras_PyQt_Paint.py,9\d\9dff5b0a6f3ae2e973991d1ff6ff62daff65b2a5
+X
+(Keras exercise/Keras_PyQt_Paint_Model.py,1\2\121579bd832b19515a4e94569b121265d240d233
+O
+PyQt exercise/PyQt5 exercise.py,f\e\fe2ae63ce37a2cbf5e6b9a0f13623d8bd6322808
+U
+%Keras exercise/Keras - Przykład 1.py,2\f\2f5aae53fbf4404504e2cb428100d0bc51db9947
+U
+%Keras exercise/Keras - Przykład 2.py,d\9\d9c1bb910fb63c88e901a0f65080c87ed495eb8a
+8
+info.txt,7\3\730b887a131e560a14dd9aa3be8d8d7c6f9d9c91
